@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="เว็บสุ่มอาหาร 5 เมนู สำหรับใบงาน ITF สัปดาห์ที่ 15">
+  <title>กินอะไรดี | เว็บสุ่มอาหาร</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="เมนูหลัก">
+      <a class="brand" href="#home"><span class="brand-icon" aria-hidden="true">✳</span> กินอะไรดี<span class="brand-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#random-food">สุ่มอาหาร</a>
+        <a href="#about">เกี่ยวกับเว็บ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="page-heading">
+      <span class="eyebrow">เมนูง่าย ๆ สำหรับทุกวัน</span>
+      <h1 id="page-heading">มื้อนี้…<br><span>กินอะไรดี?</span></h1>
+      <p class="intro">คิดเมนูไม่ออก ให้เราช่วยเลือก<br>กดสุ่ม แล้วเจอเมนูสำหรับมื้อนี้ได้เลย</p>
+
+      <article id="random-food" class="food-card">
+        <div class="food-visual">
+          <span class="image-label">เมนูที่ได้วันนี้</span>
+          <img id="food-image" src="images/fried-egg-rice.svg" alt="ภาพประกอบข้าวไข่ดาว" width="800" height="600">
+          <span class="image-caption">ภาพประกอบเมนูอาหาร</span>
+        </div>
+        <div class="food-details">
+          <div class="card-topline"><span class="category" id="food-category">อิ่มง่าย</span><span class="menu-index" id="menu-index">01 / 05</span></div>
+          <h2 id="food-name">ข้าวไข่ดาว</h2>
+          <p id="food-description">ข้าวสวยร้อน ๆ เสิร์ฟพร้อมไข่ดาวสองฟอง ขอบกรอบ ไข่แดงนุ่ม อิ่มง่ายในทุกวัน</p>
+          <p class="price"><span id="food-price">40</span><span class="price-unit">บาท / จาน</span></p>
+          <button type="button" id="random-button"><span aria-hidden="true">↻</span> สุ่มเมนูอาหาร</button>
+          <p class="hint">มี 5 เมนูให้เลือก · สุ่มครั้งถัดไปไม่ซ้ำเมนูเดิม</p>
+          <p class="sr-only" id="random-status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div><span class="eyebrow">ABOUT THIS PROJECT</span><h2 id="about-heading">เรื่องกิน ให้เป็นเรื่องง่าย</h2></div>
+      <p>เว็บไซต์ตัวอย่างสำหรับใบงาน Basic Deployment วิชา ITF<br>สร้างด้วย HTML, CSS และ JavaScript · ราคาเป็นข้อมูลตัวอย่าง</p>
+    </section>
+  </main>
+
+  <footer> 
+    <p>จัดทำโดย นายจิรภัทร  สร้อยจำปา · รหัสนักศึกษา 69070023</p>
+    <span>ITF · WEEK 15</span>
+  </footer>
+</body>
+</html>

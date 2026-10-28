@@ -1,0 +1,76 @@
+/* CSS = กำหนดสี ขนาด และการจัดวาง */
+:root {
+  --green: #255c45;
+  --ink: #252b25;
+  --muted: #676d64;
+  --paper: #faf8f1;
+  --accent: #e8efb4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Leelawadee UI", Tahoma, sans-serif; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.site-header { background: var(--paper); border-bottom: 1px solid #dfdfd1; }
+.navbar { max-width: 1120px; min-height: 88px; margin: auto; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 9px; font-size: 25px; font-weight: 800; }
+.brand-icon { color: var(--green); font-size: 35px; line-height: 1; }
+.brand-dot { color: #d78435; margin-left: -7px; }
+.nav-links { display: flex; gap: 28px; font-size: 14px; }
+.nav-links a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+main { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+.hero { padding: 54px 0 62px; text-align: center; }
+.eyebrow { color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; }
+.hero > .eyebrow { background: #e8edde; padding: 7px 16px; border-radius: 30px; letter-spacing: 0.5px; }
+h1 { font-size: clamp(44px, 6vw, 68px); line-height: 1.25; letter-spacing: -1px; margin: 22px 0 15px; }
+h1 span { color: var(--green); }
+.intro { color: var(--muted); margin: 0 0 36px; font-size: 16px; }
+.food-card { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; overflow: hidden; text-align: left; background: #fff; border: 1px solid #dedfd3; border-radius: 24px; box-shadow: 0 18px 45px #2535250a; }
+.food-visual { position: relative; min-height: 390px; display: flex; align-items: center; background: #efecd9; }
+.food-visual img { display: block; width: 100%; height: 100%; min-height: 390px; object-fit: cover; }
+.image-label { position: absolute; top: 22px; left: 22px; background: #fffc; backdrop-filter: blur(6px); padding: 5px 14px; border-radius: 30px; font-size: 12px; font-weight: 700; }
+.image-caption { position: absolute; bottom: 14px; left: 22px; color: #4c5649; font-size: 11px; }
+.food-details { padding: 34px 32px; display: flex; flex-direction: column; justify-content: center; }
+.card-topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.category { color: var(--green); background: #edf2e7; padding: 3px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+.menu-index { color: #899180; font-size: 12px; font-variant-numeric: tabular-nums; }
+.food-details h2 { font-size: 34px; line-height: 1.3; margin: 22px 0 12px; }
+#food-description { font-size: 14px; color: var(--muted); margin: 0; min-height: 72px; }
+.price { margin: 15px 0 22px; display: flex; align-items: baseline; gap: 9px; }
+#food-price { font-size: 37px; font-weight: 800; color: var(--green); }
+.price-unit { color: var(--muted); font-size: 13px; }
+#random-button { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; border: 0; border-radius: 12px; padding: 13px 14px; background: var(--green); color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 150ms, transform 150ms; }
+#random-button span { font-size: 25px; line-height: 1; }
+#random-button:hover { background: #184330; transform: translateY(-1px); }
+#random-button:active { transform: translateY(0); }
+a:focus-visible, button:focus-visible { outline: 3px solid #d68637; outline-offset: 4px; }
+.hint { color: var(--muted); font-size: 11px; text-align: center; margin: 12px 0 0; }
+.about { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid #dfdfd1; padding: 30px 0 38px; }
+.about h2 { font-size: 20px; margin: 8px 0 0; }
+.about p { font-size: 13px; color: var(--muted); margin: 0; }
+footer { max-width: 1120px; margin: auto; padding: 20px 32px; border-top: 1px solid #dfdfd1; display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--muted); font-size: 11px; }
+footer p { margin: 0; }
+footer > span { font-size: 10px; letter-spacing: 1px; white-space: nowrap; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 650px) {
+  .navbar { min-height: 74px; padding: 10px 20px; gap: 12px; }
+  .brand { font-size: 20px; gap: 6px; }
+  .brand-icon { font-size: 28px; }
+  .nav-links { gap: 13px; font-size: 11px; }
+  main { padding: 0 20px; }
+  .hero { padding: 34px 0; }
+  h1 { margin-top: 21px; }
+  .intro { font-size: 14px; margin-bottom: 28px; }
+  .food-card { grid-template-columns: 1fr; border-radius: 20px; }
+  .food-visual, .food-visual img { min-height: 0; height: 260px; }
+  .food-details { padding: 25px 24px; }
+  .food-details h2 { margin-top: 18px; font-size: 30px; }
+  #food-description { min-height: 0; }
+  .about { display: block; padding: 25px 0; }
+  .about p { margin-top: 15px; font-size: 12px; }
+  footer { padding: 18px 20px; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #random-button { transition: none; }
+}
